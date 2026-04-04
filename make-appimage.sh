@@ -9,6 +9,7 @@ export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export DESKTOP=/usr/share/applications/plus42.desktop
+export STARTUPWMCLASS=plus42
 export DEPLOY_GTK=1
 export GTK_DIR=gtk-3.0
 export ALWAYS_SOFTWARE=1
