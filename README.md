@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Plus42-AppImage)](https://github.com/pkgforge-dev/Plus42-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/Link4Electronics/Plus42-AppImage/blob/main/AppDir/plus42.png" width="128" />
+  <img src="https://github.com/pkgforge-dev/Plus42-AppImage/blob/main/AppDir/plus42.png" width="128" />
 </p>
 
 
