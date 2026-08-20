@@ -32,11 +32,6 @@ make BCD_MATH=1
 mv -v plus42bin ../AppDir/bin
 mv -v plus42dec ../AppDir/bin/plus42
 
-    /usr/share/plus42/skins
-
-cp -a plus42bin /usr/bin/plus42bin
-cp -a plus42dec /usr/bin/plus42
-
 cd ../skins
 for x in Plus42.* README.txt; do
     cp "$x" ../../AppDir/share/plus42/skins
