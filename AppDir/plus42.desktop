@@ -4,4 +4,5 @@ Exec=plus42
 Icon=plus42
 Terminal=false
 Type=Application
+StartupWMClass=plus42
 Categories=Utility;Calculator;
