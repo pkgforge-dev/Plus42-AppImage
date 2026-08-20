@@ -12,15 +12,32 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-# Comment this out if you need an AUR package
-make-aur-package plus42
+echo "Building Plus42..."
+echo "---------------------------------------------------------------"
+REPO="https://thomasokken.com/plus42"
+VERSION=1.3.15
+curl -fLo "plus42-upstream-$VERSION.tgz" "$REPO/upstream/plus42-upstream-$VERSION.tgz"
+tar -xzf "plus42-upstream-$VERSION.tgz"
+echo "$VERSION" > ~/version
 
-# If the application needs to be manually built that has to be done down here
+mkdir -p ./AppDir/bin
+mkdir -p ./AppDir/share/plus42/skins
+cd "plus42-upstream-$VERSION/gtk"
 
-# if you also have to make nightly releases check for DEVEL_RELEASE = 1
-#
-# if [ "${DEVEL_RELEASE-}" = 1 ]; then
-# 	nightly build steps
-# else
-# 	regular build steps
-# fi
+# build both bin and dec version
+make cleaner
+make
+make clean
+make BCD_MATH=1
+mv -v plus42bin ../AppDir/bin
+mv -v plus42dec ../AppDir/bin/plus42
+
+    /usr/share/plus42/skins
+
+cp -a plus42bin /usr/bin/plus42bin
+cp -a plus42dec /usr/bin/plus42
+
+cd ../skins
+for x in Plus42.* README.txt; do
+    cp "$x" ../../AppDir/share/plus42/skins
+done
