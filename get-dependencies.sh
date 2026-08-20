@@ -29,10 +29,10 @@ make cleaner
 make
 make clean
 make BCD_MATH=1
-mv -v plus42bin ../AppDir/bin
-mv -v plus42dec ../AppDir/bin/plus42
+mv -v plus42bin ../../AppDir/bin
+mv -v plus42dec ../../AppDir/bin/plus42
 
 cd ../skins
-for x in Plus42.* README.txt; do
+for x in Plus42.* ; do
     cp "$x" ../../AppDir/share/plus42/skins
 done
