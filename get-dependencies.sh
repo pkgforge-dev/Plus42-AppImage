@@ -15,7 +15,7 @@ get-debloated-pkgs --add-common --prefer-nano
 echo "Building Plus42..."
 echo "---------------------------------------------------------------"
 REPO="https://thomasokken.com/plus42"
-VERSION=1.3.15
+VERSION=1.4.1
 curl -fLo "plus42-upstream-$VERSION.tgz" "$REPO/upstream/plus42-upstream-$VERSION.tgz"
 tar -xzf "plus42-upstream-$VERSION.tgz"
 echo "$VERSION" > ~/version
